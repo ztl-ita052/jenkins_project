@@ -1,5 +1,5 @@
 #include<stdio.h>
-int main()
+int sub()
 {
   int a=10,b=5,c;
   c=a-b;
