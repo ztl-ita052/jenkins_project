@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ztl-ita052/jenkins_project.git']]]
+                sh 'gcc main.c'
+                sh './a.out'
+            }
+        }
+    }
+}
