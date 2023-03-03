@@ -1,4 +1,4 @@
-#include "declaraton.h"
+#include "declaration.h"
 #include<stdio.h>
 int main()
 {
